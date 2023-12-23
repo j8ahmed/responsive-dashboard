@@ -1,3 +1,21 @@
+# Responsive Dashboard UI
+
+
+## Features
+
+```
+[] 
+[] 
+[] 
+[] 
+[] 
+
+```
+
+## Bugs / Fixes
+
+--- 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +86,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+---
+
+## Meta Data
+
+Started On: 2023-12-23
+
+### References:
+
+- [Inspiration - CodePen - Ecem Gokdogan](https://codepen.io/ecemgo/pen/YzBZjjb)
+- []()
+- []()
+- []()
