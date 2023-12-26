@@ -4,11 +4,13 @@
 ## Features
 
 ```
-[] 
-[] 
-[] 
-[] 
-[] 
+[ ] Single page application (SPA)
+[ ] Nav Menu
+    [ ] Menu item special styles based on the "active" page 
+[ ] Sidebar
+[ ] Capacity to load multiple pages in the same area based on state
+[ ] 
+[ ] 
 
 ```
 
@@ -96,7 +98,7 @@ Started On: 2023-12-23
 
 ### References:
 
-- [Inspiration - CodePen - Ecem Gokdogan](https://codepen.io/ecemgo/pen/YzBZjjb)
+- [Inspiration - CodePen - Responsive Dashboard | Bento Style - Ecem Gokdogan](https://codepen.io/ecemgo/pen/YzBZjjb)
 - []()
 - []()
 - []()

@@ -1,0 +1,28 @@
+/* Snake Game App styles */
+
+.nav-container{
+    padding: 0 16px;
+    nav{
+        ul{
+            list-style: none;
+            padding-left: 0;
+            li{
+                display: flex;
+                gap: 16px;
+                padding: 8px 0;
+                align-items: center;
+                .menu-item-name{
+                    margin: 0;
+                    padding: 0;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+    .placeholder-img{
+        width: 30px;
+        height: 30px;
+        background: pink;
+    }
+}
+

@@ -1,0 +1,30 @@
+/* Home Page styles */
+
+$max_width: 1500px;
+$max_width: 1310px;
+$max_width: 1150px;
+$max_width: 1050px;
+$max_width: 950px;
+$max_width: 800px;
+$max_width: 700px;
+
+#home-page{
+    padding: 16px;
+    background: teal;
+    .courses-container{
+        display: grid;
+        grid-template-areas:
+            "c1 c3 c3 c4 c5"
+            "c2 c3 c3 c6 c6"
+        ;
+        gap: 16px;
+        background: red;
+        .course-item{
+            padding: 16px;
+            background: blue;
+            .course-name{
+                margin: 0;
+            }
+        }
+    }
+}
