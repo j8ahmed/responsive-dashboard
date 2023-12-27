@@ -1,6 +1,12 @@
-/* Snake Game App styles */
+/* Navigation Menu Styles */
 
 .nav-container{
+    h3{
+        @media(max-width: 500px){
+            display: none;
+        }
+    }
+    background: green;
     padding: 0 16px;
     nav{
         ul{
@@ -8,10 +14,27 @@
             padding-left: 0;
             li{
                 display: flex;
-                gap: 16px;
+                gap: 8px;
+                @media(max-width: 500px){
+                    gap: 16px;
+                }
                 padding: 8px 0;
                 align-items: center;
+                svg {
+                    width: 16px;
+                    height: 16px;
+                    @media(max-width: 500px){
+                        width: 24px;
+                        height: 24px;
+                    }
+                    path{
+                        fill: white;
+                    }
+                }
                 .menu-item-name{
+                    @media(max-width: 500px){
+                        display: none;
+                    }
                     margin: 0;
                     padding: 0;
                     text-transform: capitalize;

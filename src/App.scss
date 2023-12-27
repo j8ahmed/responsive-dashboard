@@ -25,5 +25,9 @@ body {
 .app-container{
     display: grid;
     grid-template-columns: 1fr 7fr;
+    @media(max-width: 500px){
+        grid-template-columns: auto 1fr;
+    }
+
 }
 

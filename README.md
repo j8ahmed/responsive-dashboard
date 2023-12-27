@@ -99,6 +99,6 @@ Started On: 2023-12-23
 ### References:
 
 - [Inspiration - CodePen - Responsive Dashboard | Bento Style - Ecem Gokdogan](https://codepen.io/ecemgo/pen/YzBZjjb)
-- []()
+- [Fontawesome for the icons](https://fontawesome.com/icons/)
 - []()
 - []()

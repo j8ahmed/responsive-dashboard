@@ -9,18 +9,28 @@ $max_width: 800px;
 $max_width: 700px;
 
 #home-page{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 16px;
     padding: 16px;
     background: teal;
     .courses-container{
         display: grid;
-        grid-template-areas:
-            "c1 c3 c3 c4 c5"
-            "c2 c3 c3 c6 c6"
-        ;
         gap: 16px;
         background: red;
+        @media( min-width: 1200px){
+            grid-template-columns: repeat(5, minmax(150px, 1fr));
+            grid-template-rows: repeat(2, 150px);
+            grid-template-areas:
+                "c1 c3 c3 c4 c5"
+                "c2 c3 c3 c6 c6"
+            ;
+        }
         .course-item{
             padding: 16px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
             background: blue;
             .course-name{
                 margin: 0;
