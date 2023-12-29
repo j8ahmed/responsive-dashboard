@@ -16,6 +16,12 @@
 
 ## Bugs / Fixes
 
+### How To Make A Progress Circle
+
+There are two different approaches. One is using [`svg` attributes](https://css-tricks.com/building-progress-ring-quickly/) like `stroke-dasharray` and `stroke-dashoffset` to adjust the percentage of the circumference of the circle element we want to show.
+
+The other approach is using regular HTML elements and the `background: conic-gradient(...)` style attribute in CSS to once again adjust the percentage of the circle being shown. This is the approach used by the original designer/developer of this U.I. "Ecem Gokdogan" so I will go with that. It is also less code and calculations tbh. 
+
 --- 
 
 # Getting Started with Create React App

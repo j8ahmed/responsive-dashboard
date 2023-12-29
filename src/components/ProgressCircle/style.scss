@@ -1,0 +1,27 @@
+/* ProgressCircle Component Styles */
+
+$circle_size: 100px;
+
+.progress-circle{
+    width: $circle_size;
+    height: $circle_size;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before{
+        $size: 80px;
+        content: "";
+        position: absolute;
+        width: $size;
+        height: $size;
+        inset: ($circle_size - $size) / 2;
+        border-radius: 50%;
+        background: grey;
+    }
+    h3{
+        position: relative;
+        font-size: 30px;
+    }
+}

@@ -1,6 +1,41 @@
 /* SideBar Component Styles */
 
 .sidebar{
+    padding: 16px;
     background: purple;
+    #user-header{
+        display: flex;
+        gap: 16px;
+        justify-content: space-around;
+        align-items: center;
+        svg path{
+            fill: white;
+        }
+        h3{
+            margin: 0;
+        }
+    }
+    #gpa-container{
+    }
+    .posts-container{
+        .header{
+            background: coral;
+            display: flex;
+            gap: 16px;
+            h3{
+                margin: 0;
+            }
+        }
+    }
+    .placeholder-img{
+        width: 30px;
+        height: 30px;
+        background: pink;
+    }
+    .placeholder-thumbnail{
+        width: 100%;
+        height: 150px;
+        background: grey;
+    }
 }
 

@@ -9,11 +9,31 @@ $max_width: 800px;
 $max_width: 700px;
 
 #home-page{
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: 16px;
     padding: 16px;
     background: teal;
+    display: grid;
+    gap: 16px;
+    grid-template-areas:
+        "row1"
+        "row2"
+    ;
+    @media( min-width: 1200px){
+        grid-template-areas: none;
+        grid-template-columns: 3fr 1fr;
+    }
+    & > *:first-child{
+        background: pink;
+        grid-area: row2;
+        @media( min-width: 1200px){
+            grid-area: auto;
+        }
+    }
+    & > *:last-child{
+        grid-area: row1;
+        @media( min-width: 1200px){
+            grid-area: auto;
+        }
+    }
     .courses-container{
         display: grid;
         gap: 16px;
