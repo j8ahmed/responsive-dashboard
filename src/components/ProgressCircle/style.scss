@@ -7,7 +7,8 @@ $circle_size: 100px;
 .progress-circle{
     width: $circle_size;
     height: $circle_size;
-    border-radius: 50%;
+    background-color: $theme_grey;
+    border-radius: 90%;
     position: relative;
     display: flex;
     justify-content: center;
@@ -18,7 +19,7 @@ $circle_size: 100px;
         position: absolute;
         width: $size;
         height: $size;
-        inset: ($circle_size - $size) / 2;
+        inset: calc(($circle_size - $size) / 2);
         border-radius: 50%;
         background: $theme_white;
     }

@@ -19,27 +19,48 @@ $max_width: 700px;
         "row1"
         "row2"
     ;
-    @media( min-width: 1200px){
+    @media( min-width: 700px){
         grid-template-areas: none;
         grid-template-columns: 3fr 1fr;
     }
     & > *:first-child{
         background: grey;
         grid-area: row2;
-        @media( min-width: 1200px){
+        @media( min-width: 400px){
             grid-area: auto;
         }
     }
     & > *:last-child{
         grid-area: row1;
-        @media( min-width: 1200px){
+        @media( min-width: 400px){
             grid-area: auto;
         }
+    }
+    #content-container{
+        border-radius: 16px;
+        padding: 16px;
+        background-color: rgba($theme_grey, 0.3);
     }
     .courses-container{
         display: grid;
         gap: 16px;
-        background: red;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-rows: repeat(2, 150px);
+        @media( min-width: 400px){
+            grid-template-columns: repeat(2, minmax(150px, 1fr));
+            grid-template-rows: repeat(2, 150px);
+            grid-template-areas:
+                "c1 c4"
+                "c2 c5"
+                "c3 c6"
+            ;
+            .course-item.c1{ grid-area: c1 }
+            .course-item.c2{ grid-area: c2 }
+            .course-item.c3{ grid-area: c3 }
+            .course-item.c4{ grid-area: c4 }
+            .course-item.c5{ grid-area: c5 }
+            .course-item.c6{ grid-area: c6 }
+        }
         @media( min-width: 1200px){
             grid-template-columns: repeat(5, minmax(150px, 1fr));
             grid-template-rows: repeat(2, 150px);
@@ -49,14 +70,86 @@ $max_width: 700px;
             ;
         }
         .course-item{
+            position: relative;
             padding: 16px;
             display: flex;
             align-items: flex-end;
             justify-content: flex-end;
-            background: blue;
+            border-radius: 8px;
+            background-color: $theme_blue;
+            background-image: linear-gradient(
+                180deg,
+                transparent,
+                transparent,
+                rgba($theme_teal, 0.7)
+            );
+            transition: background-image 1.25s;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                inset: 0 0;
+                opacity: 0;
+                transition: opacity 0.25s;
+                background-image: linear-gradient(
+                    180deg,
+                    transparent,
+                    transparent,
+                    rgba($theme_black, 0.3)
+                );
+            }
+            &:hover::before{
+                opacity: 1;
+            }
             .course-name{
                 margin: 0;
+                text-transform: capitalize;
+                color: $theme_white;
             }
         }
     }
+    section#schedule{
+        #schedule-container{
+            display: grid;
+            gap: 16px;
+            .schedule-item{
+                padding: 8px 16px;
+                display: flex;
+                align-items: center;
+                gap: 32px;
+                border-radius: 16px;
+                background: $theme_blue;
+                color: $theme_white;
+                .date{
+                    position: relative;
+                    display: flex;
+                    width: 40px;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    #monthday{
+                        font-size: 1.5em;
+                    }
+                    h3{
+                        margin: 0;
+                    }
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        right: -20px;
+                        // inset: 0 0 0 100%;
+                        height: 130%;
+                        width: 8px;
+                        background-color: $theme_white;
+                    }
+                }
+                .class-name{
+                    text-transform: capitalize;
+                    font-size: 2em;
+                }
+            }
+        }
+    }
+
 }

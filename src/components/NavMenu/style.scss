@@ -1,9 +1,9 @@
-/* Navigation Menu Styles */
+/* Navigation Menu Component Styles */
 
 @use "../../theme" as *;
 
-
 .nav-container{
+    color: $theme_white;
     h3{
         @media(max-width: 500px){
             display: none;

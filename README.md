@@ -1,5 +1,13 @@
 # Responsive Dashboard UI
 
+## Screenshot Of The Original Design By: Ecem Gokdogan
+
+![Original Design](./designs/screenshot.jpg)
+
+## Screenshot Of My Version:
+
+![My Skeleton U.I.](./designs/screenshot2.jpg)
+
 
 ## Features
 

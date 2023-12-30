@@ -2,6 +2,9 @@ import './style.scss';
 import { SideBar } from '../../components/'
 // import { useState } from 'react';
 
+const days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT",];
+const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+
 const courses = [
     {
         name: "math",
@@ -29,10 +32,36 @@ const courses = [
     },
 ]
 
+// get the next day of the week (sunday - monday) = (0 - 6)
+const getNextDayOfWeek = (day) => {
+    const d = new Date();
+    d.setDate( d.getDate() + ((day + (7 - d.getDay()) % 7) || 7) )
+    return d
+}
+
+const schedule = [
+    {
+        date: getNextDayOfWeek(1),
+        className: "Math"
+    },
+    {
+        date: getNextDayOfWeek(2),
+        className: "art"
+    },
+    {
+        date: getNextDayOfWeek(4),
+        className: "history"
+    },
+    {
+        date: getNextDayOfWeek(5),
+        className: "Physics"
+    },
+]
+
 export default function HomePage() {
     return (
         <main id="home-page" className="page-container">
-            <div className="">
+            <div id="content-container">
                 <div className="">
                     <h2>Popular Courses</h2>
                     <div className="courses-container">
@@ -42,8 +71,7 @@ export default function HomePage() {
                                 return (
                                     <div 
                                         key={i} 
-                                        className="course-item math"
-                                        style={{gridArea: `c${i+1}`}}
+                                        className={`course-item c${i+1}`}
                                     >
                                         <h3 className="course-name">{name}</h3>
                                     </div>
@@ -53,42 +81,26 @@ export default function HomePage() {
                     </div>
                 </div>
 
-                <div className="">
+                <section id="schedule" className="">
                     <h2>Weekly Schedule</h2>
 
-                    <div className="">
-                        {}
-                        <div className="">
-                            <h3 className="">class 1</h3>
-                        </div>
-                        <div className="">
-                            <h3 className="">class 2</h3>
-                        </div>
-                        <div className="">
-                            <h3 className="">class 3</h3>
-                        </div>
-                        <div className="">
-                            <h3 className="">class 4</h3>
-                        </div>
+                    <div id="schedule-container">
+                        {
+                            schedule.map((classEvent, i) => {
+                                const {date, className} = classEvent;
+                                return (
+                                    <div key={i} className="schedule-item">
+                                        <h3 className="date">
+                                            <span id="monthday">{date.getDate()}</span>
+                                            <span id="weekday">{days[date.getDay()]}</span>
+                                        </h3>
+                                        <h3 className="class-name">{className}</h3>
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
-                </div>
-
-                <div className="">
-                    <h2>Recent Results</h2>
-
-                    <div className="">
-                        {}
-                        <div className="">
-                            <h3 className="">Biology Lab: A+</h3>
-                        </div>
-                        <div className="">
-                            <h3 className="">Math exam: B</h3>
-                        </div>
-                        <div className="">
-                            <h3 className="">History assignment: A</h3>
-                        </div>
-                    </div>
-                </div>
+                </section>
             </div>
 
             <SideBar/>

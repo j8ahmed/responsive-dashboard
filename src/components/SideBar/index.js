@@ -39,14 +39,14 @@ export default function SideBar() {
                 <ProgressCircle value={3.8} total={4.0}/>
             </div>
 
-            <div id="" className="">
+            <section id="discussion" className="">
                 <h3>Recent Discussions</h3>
                 <div id="" className="posts-container">
                     {
                         posts.map((post, i) => {
                             const {user, description} = post;
                             return (
-                                <div key={i} id="" className="">
+                                <div key={i} id="" className="post-item">
                                     <div className="header">
                                         <div className="placeholder-img"></div>
                                         <h3>{user.name}</h3>
@@ -58,7 +58,7 @@ export default function SideBar() {
                         })
                     }
                 </div>
-            </div>
+            </section>
 
         </aside>
     )
