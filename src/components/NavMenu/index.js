@@ -1,5 +1,5 @@
 import './style.scss';
-// import { useState } from 'react';
+import { useState } from 'react';
 
 const menuItems = [
     {
@@ -30,6 +30,7 @@ const menuItems = [
 ]
 
 export default function NavMenu() {
+    const [activePage, setActivePage] = useState("home");
     return (
         <aside className="nav-container">
             <h3>Student Dashboard</h3>
@@ -39,12 +40,16 @@ export default function NavMenu() {
                         menuItems.map((item, i) => {
                             const {name, icon} = item
                             return (
-                                <li key={i} className="menu-item">
+                                <li key={i} className={`menu-item ${activePage === name && "active-page"}`}>
+                                    <div className="border top"></div>
+
                                     {
                                         icon ??
                                         <div className="placeholder-img"></div>
                                     }
                                     <h4 className="menu-item-name">{name}</h4>
+
+                                    <div className="border bottom"></div>
                                 </li>
                             )
                         })

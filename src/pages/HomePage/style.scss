@@ -1,5 +1,7 @@
 /* Home Page styles */
 
+@use "../../theme" as *;
+
 $max_width: 1500px;
 $max_width: 1310px;
 $max_width: 1150px;
@@ -10,7 +12,7 @@ $max_width: 700px;
 
 #home-page{
     padding: 16px;
-    background: teal;
+    background: $theme_white;
     display: grid;
     gap: 16px;
     grid-template-areas:
@@ -22,7 +24,7 @@ $max_width: 700px;
         grid-template-columns: 3fr 1fr;
     }
     & > *:first-child{
-        background: pink;
+        background: grey;
         grid-area: row2;
         @media( min-width: 1200px){
             grid-area: auto;

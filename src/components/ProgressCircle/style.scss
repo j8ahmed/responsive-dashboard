@@ -1,5 +1,7 @@
 /* ProgressCircle Component Styles */
 
+@use "../../theme" as *;
+
 $circle_size: 100px;
 
 .progress-circle{
@@ -18,10 +20,11 @@ $circle_size: 100px;
         height: $size;
         inset: ($circle_size - $size) / 2;
         border-radius: 50%;
-        background: grey;
+        background: $theme_white;
     }
     h3{
         position: relative;
         font-size: 30px;
+        color: $theme_blue;
     }
 }

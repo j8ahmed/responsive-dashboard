@@ -1,25 +1,78 @@
 /* Navigation Menu Styles */
 
+@use "../../theme" as *;
+
+
 .nav-container{
     h3{
         @media(max-width: 500px){
             display: none;
         }
     }
-    background: green;
+    background: $theme_blue;
     padding: 0 16px;
     nav{
         ul{
             list-style: none;
             padding-left: 0;
             li{
+                margin: 8px 0;
                 display: flex;
+                padding: 8px;
+                align-items: center;
                 gap: 8px;
                 @media(max-width: 500px){
                     gap: 16px;
                 }
-                padding: 8px 0;
-                align-items: center;
+                .border{
+                    display: none;
+                }
+                &.active-page{
+                    color: $theme_blue;
+                    background: $theme_white;
+                    border-top-left-radius: 8px;
+                    border-bottom-left-radius: 8px;
+                    position: relative;
+                    &::after{
+                        content: "";
+                        width: 16px;
+                        height: 100%;
+                        position: absolute;
+                        right: -16px;
+                        background: $theme_white;
+                    }
+                    svg path{
+                        fill: $theme_blue;
+                    }
+                    .border{
+                        display: block;
+                        background: $theme_white;
+                        height: 16px;
+                        width: 100%;
+                        margin-left: 8px;
+                        position: absolute;
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            background: $theme_blue;
+                            height: 16px;
+                            width: 100%;
+                            position: absolute;
+                        }
+                        &.top{
+                            top: -16px;
+                            &::before{
+                                border-bottom-right-radius: 16px;
+                            }
+                        }
+                        &.bottom{
+                            bottom: -16px;
+                            &::before{
+                                border-top-right-radius: 16px;
+                            }
+                        }
+                    }
+                }
                 svg {
                     width: 16px;
                     height: 16px;

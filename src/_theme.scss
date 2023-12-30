@@ -1,0 +1,29 @@
+/* Theme Styles */
+
+$theme_white: rgb(235,235,235);
+$theme_teal: rgb(0,175,175);
+$theme_blue: rgb(38, 109, 211);
+$green: rgb(0,175,0);
+$red: rgb(175,0,0);
+$game_width: 320px;
+
+:root{
+    --theme_blue: rgb(38, 109, 211);
+    --theme_white: rgb(235,235,235);
+    --theme_teal: rgb(0,175,175);
+}
+
+*{
+    box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(30,30,30);
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
