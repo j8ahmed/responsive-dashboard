@@ -30,6 +30,10 @@ There are two different approaches. One is using [`svg` attributes](https://css-
 
 The other approach is using regular HTML elements and the `background: conic-gradient(...)` style attribute in CSS to once again adjust the percentage of the circle being shown. This is the approach used by the original designer/developer of this U.I. "Ecem Gokdogan" so I will go with that. It is also less code and calculations tbh. 
 
+### Getting The Date Of The Next Weekday
+
+This was a fun problem to solve. "What day is next 'monday'?" using code. The solution used a creative bitwise `OR` comparison alongside a nifty modulus operation to calculate the date of the next 'monday', 'tuesday', etc. I got the idea from [this stackOverflow solution](https://stackoverflow.com/questions/33078406/getting-the-date-of-next-monday)
+
 --- 
 
 # Getting Started with Create React App
@@ -114,5 +118,5 @@ Started On: 2023-12-23
 
 - [Inspiration - CodePen - Responsive Dashboard | Bento Style - Ecem Gokdogan](https://codepen.io/ecemgo/pen/YzBZjjb)
 - [Fontawesome for the icons](https://fontawesome.com/icons/)
-- []()
+- [Favicon Generator](https://www.favicon-generator.org/)
 - []()
